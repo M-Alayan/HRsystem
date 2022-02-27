@@ -1,0 +1,41 @@
+﻿@model List<Department>
+
+<h2>Department List</h2>
+<form method="post">
+    <div class="row" style="margin-top:10px">
+        <div class="col-lg-1">
+            <span>Name</span>
+        </div>
+        <div class="col-sm-3 col-sm-offset-2"><input type="text" class="form-control" name="name" /></div>
+        <div class="col-lg-1">
+            <input type="submit" value="Save" class="btn btn-primary" asp-action="dlist" />
+        </div>
+    </div>
+
+
+    <table class="table table-bordered table-hover table-striped" style="margin-top:10px">
+        <thead>
+        <th>Name</th>
+        <th>Desciption</th>
+        <th>Options</th>
+       
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+               
+                    <td><input type="submit" value="Edit" asp-action="editinfo" />  <input type="submit" value="Delete" asp-action="deleteinfo" /><input type="submit" value="Employee"  /></td>
+                </tr>
+            }
+
+
+
+
+
+
+        </tbody>
+    </table>
+</form>

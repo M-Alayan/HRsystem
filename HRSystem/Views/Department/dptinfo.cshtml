@@ -1,0 +1,20 @@
+﻿@model Department
+
+<h2>Department</h2>
+<form method="post">
+    <div class="row" style="margin-top:10px">
+        <div class="col-lg-1">
+            <span>Name</span>
+        </div>
+        <div class="col-sm-3 "><input type="text" class="form-control" asp-for="Name" /></div>
+        <div class="col-lg-1 col-lg-offset-1 ">
+            <span>Description</span>
+        </div>
+        <div class="col-sm-3"><input type="text" class="form-control" asp-for="Description" /></div>
+    </div>
+    <div class="row" style="margin-top:10px">
+        <div class="col-lg-offset-8 col-sm-3">
+            <input type="submit" value="Save" class="btn btn-primary" asp-action="saveinfo" />
+        </div>
+    </div>
+</form>

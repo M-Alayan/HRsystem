@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_HRlayout</title>
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/twitter-bootstrap/js/bootstrap.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar-inverse" style="color:blue">
+                <div class="navbar-brand">
+                    Dare Academy
+                </div>
+                
+                <div id="menu1" class="navbar-collapse collapse">
+                    <ul class="nav navbar-right">
+                      
+                        <li>
+                            <a href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+
+            </div>
+
+        </div>
+    </div>
+    @RenderBody()
+</body>
+</html>

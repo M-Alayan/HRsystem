@@ -1,0 +1,90 @@
+﻿@model HRSystem.Models.VMemployee
+
+
+
+<h2>Employee</h2>
+
+<form method="post">
+
+
+    <div class="row" style="margin-top:10px">
+        <div class="col-lg-1">
+            <span>First Name</span>
+        </div>
+        <div class="col-sm-3 "><input type="text" class="form-control" asp-for="employee.FName"/></div>
+        <div class="col-lg-1 col-lg-offset-1 ">
+            <span>Last Name</span>
+        </div>
+        <div class="col-sm-3"><input type="text" class="form-control" asp-for="employee.LName"/></div>
+    </div>
+    <div class="row" style="margin-top:10px">
+        <div class="col-lg-1">
+            <span>Phone</span>
+        </div>
+        <div class="col-sm-3 "><input type="text" class="form-control" asp-for="employee.Phone"/></div>
+        <div class="col-lg-1 col-lg-offset-1 ">
+            <span>Gender</span>
+        </div>
+        <div class="col-sm-3">
+            <select asp-for="employee.Gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+
+            </select>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top:10px">
+        <div class="col-lg-1">
+            <span>Country</span>
+        </div>
+        <div class="col-sm-3 "><select asp-items='new SelectList(Model.licountry,"Id","Name")' asp-for="employee.country_id"></select></div>
+        <div class="col-lg-1 col-lg-offset-1 ">
+            <span>City</span>
+        </div>
+        <div class="col-sm-3"><select asp-items='new SelectList(Model.licity,"Id","Name")' asp-for="employee.city_id"></select></div>
+    </div>
+    <div class="row" style="margin-top:10px">
+        <div class="col-lg-1">
+            <span>Address</span>
+        </div>
+        <div class="col-sm-3 "><input type="text" class="form-control" asp-for="employee.Address"/></div>
+        <div class="col-lg-1 col-lg-offset-1 ">
+            <span>Email</span>
+        </div>
+        <div class="col-sm-3"><input type="text" class="form-control" asp-for="employee.Email"/></div>
+    </div>
+    <div class="row" style="margin-top:10px">
+        <div class="col-lg-1">
+            <span>Salary</span>
+        </div>
+        <div class="col-sm-3 "><input type="text" class="form-control" asp-for="employee.Salary" /></div>
+        <div class="col-lg-1 col-lg-offset-1 ">
+            <span>Expected Salary</span>
+        </div>
+        <div class="col-sm-3"><input type="text" class="form-control" asp-for="employee.ExpectedSalary"/></div>
+    </div>
+    <div class="row" style="margin-top:10px">
+        <div class="col-lg-1">
+            <span>Department</span>
+        </div>
+        <div class="col-sm-3 "><select asp-items='new SelectList(Model.lidepartment,"Id","Name")' asp-for="employee.department_id"></select></div>
+        <div class="col-lg-1 col-lg-offset-1 ">
+            <span>HireDate</span>
+        </div>
+        <div class="col-sm-3"><input type="date" class="form-control" asp-for="employee.Hiredate" /></div>
+    </div>
+    <div class="row" style="margin-top:10px">
+        <div class="col-lg-1">
+            <span>Img-URL</span>
+        </div>
+        <div class="col-sm-3 "><input type="file" /></div>
+       
+    </div>
+
+    <div class="row" style="margin-top:10px">
+        <div class="col-lg-offset-8 col-sm-3">
+            <input type="submit" value="Save" class="btn btn-primary" asp-action="saveinfo" />
+        </div>
+    </div>
+</form>
